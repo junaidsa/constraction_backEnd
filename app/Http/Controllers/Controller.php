@@ -11,6 +11,7 @@ abstract class Controller
         {
             $response['type'] = $type;
             $response['code'] = $code;
+            $response['status'] = $status;
             $response['message'] = $message;
             $response['base_url'] = URL::to('/');
             if (!empty($data)) {

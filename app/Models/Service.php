@@ -13,9 +13,14 @@ class Service extends Model
     protected $fillable = [
         'title',
         'slug',
-        'short_description',
+        'short_desc',
         'content',
         'image',
         'status',
     ];
+    // create a schope object active inavctive mode
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
 }
